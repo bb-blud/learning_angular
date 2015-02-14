@@ -13,6 +13,10 @@
     <div class="list-group">
       <div class="list-group-item" ng-repeat="product in store.products">
         <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+
+<!----------------------########################################---------------------------------->
+<!-------------Can't get their (more elegant) code to work, copy pasted exactly from them---------->
+
         <div ng-controller="GalleryController as gallery"  ng-show="product.images.length">
           <div class="img-wrap">
             <img ng-src="{{product.images[gallery.current]}}" />
@@ -23,6 +27,9 @@
             </li>
           </ul>
         </div>
+<!------------------------------------------------------------------------------------------------>
+
+
         <section ng-controller="TabController as tab">
           <ul class="nav nav-pills">
             <li ng-class="{ active:tab.isSet(1) }">
