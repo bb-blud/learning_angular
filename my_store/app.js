@@ -33,7 +33,9 @@
 
     app.controller("ReviewController", function(){
         this.review = {};
+
         this.addReview = function (product){
+//            this.review.createdOn = Date.now();
             product.reviews.push(this.review);
             this.review = {};
         };
@@ -54,13 +56,15 @@
                 {
                     stars:5,
                     body:"This gem is the shitsnizz",
-                    author:"toto@gumby"
+                    author:"toto@gumby",
+                    createdOn: 1397490980837
                 },
 
                 {
                     stars:1,
                     body:"I hated this thing sooo much",
-                    author:"felix@grump"
+                    author:"felix@grump",
+                    createdOn: 1397490980837
                 }
             ]
 
@@ -77,13 +81,15 @@
                 {
                     stars:5,
                     body:"It lights up my netherworld everytime",
-                    author:"razgul@mordor"
+                    author:"razgul@mordor",
+                    createdOn: 1397490980837
                 },
 
                 {
                     stars:2,
                     body:"Ehg, seen better",
-                    author:"tony@nyc"
+                    author:"tony@nyc",
+                    createdOn: 1397490980837
                 }
             ]
 
