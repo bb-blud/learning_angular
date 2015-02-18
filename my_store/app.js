@@ -51,7 +51,8 @@
             description: 'Some gems have qualities beyond the luster, beyond the shine...Dodeca is one of those gems.',
             canPurchase: true,
             soldOut: false,
-            images: ['pics/dodec_b.png',['pics/dodec_b_thumb.png','pics/dodec_thumb.png']],
+            images: ['pics/dodec_b.png'],
+            thumbnails: ['pics/dodec_b_thumb.png','pics/dodec_thumb.png'],
             reviews:[
                 {
                     stars:5,
@@ -76,7 +77,8 @@
             price: 5.95,
             description:'The Pentagonal Gem is the alpine baron of gems, with hues, blue as the iris of an Austrian maiden',
             canPurchase: true,
-            images: ['pics/pentag.png',['pics/pentag_thumb.png','pics/pentag_ch_thumb.png']],
+            images: ['pics/pentag.png'],
+            thumbnails:['pics/pentag_thumb.png','pics/pentag_ch_thumb.png'],
             reviews:[
                 {
                     stars:5,

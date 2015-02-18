@@ -31,8 +31,8 @@
           <img class="img img-thumbnail center-block" ng-src="{{product.images[gallery.current]}}" /> 
         </div> 
         <ul class="clearfix"> 
-          <li class="pull-left thumbnail" ng-repeat="image in product.images[1]"> 
-            <img ng-src="{{image}}" /> 
+          <li class="pull-left thumbnail" ng-repeat="thumbnail in product.thumbnails"> 
+            <img ng-src="{{thumbnail}}" /> 
           </li> 
         </ul> 
       </div>
