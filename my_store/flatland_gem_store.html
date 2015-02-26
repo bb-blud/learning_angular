@@ -10,25 +10,23 @@
 
   </head>
 
-  <body class="list-group" ng-controller="StoreController as store">
+  <body ng-controller="StoreController as store">
 
     <header>
       <h1 class="text-center">Flatlander Crafted Gems</h1>
       <h2 class="text-center">- an Angular store -</h2>
     </header>
-
+    
     <!-- Product Container -->
+    <!-- <div class="list-group"> -->
+
     <div class="list-group-item" ng-repeat="product in store.products">
-      <h3>{{product.name}}  <em class="pull-right">{{product.price | currency}}</em></h3>
-
-
-<!---------------------------##################################------------------------------------------->
-<!-----------My hackety way works here with a modified images field in app.js----------------------------->
+      <h3>{{product.name}} <em class="pull-right"> {{product.price | currency}}</em></h3>
 
       <!-- Image Gallery -->
       <div class="gallery" ng-controller="GalleryController as gallery">
         <div class="img-wrap"> 
-          <img class="img img-thumbnail center-block" ng-src="{{product.images[gallery.current]}}" /> 
+          <img class="center-block" ng-src="{{product.images[gallery.current]}}" /> 
         </div> 
         <ul class="clearfix"> 
           <li class="pull-left thumbnail" ng-repeat="thumbnail in product.thumbnails"> 
@@ -36,7 +34,7 @@
           </li> 
         </ul> 
       </div>
-<!---------------------------###################################------------------------------------------>
+
 
       <!-- Tab Container -->
       <section ng-controller="PanelController as panel">
@@ -52,11 +50,13 @@
           </li>
         </ul>
         
-
-        <div class="panel" ng-show="panel.isSelected(1)">
+        <!-- Description Tab's Content -->
+        <div ng-show="panel.isSelected(1)">
           <h4>Description</h4>
-          <p>{{product.description}}</p>
+          <blockquote>{{product.description}}</blockquote>
+          <!-- <product-description ng-show="panel.isSelected(1)"></product-description> -->
         </div>
+
         <div class="panel" ng-show="panel.isSelected(2)">
           <h4>Specifications</h4>
           <blockquote>None yet </blockquote>

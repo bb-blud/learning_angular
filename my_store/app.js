@@ -28,14 +28,28 @@
         this.isSelected = function(checkTab){
             return this.tab === checkTab;
         };
- 
+        
     });
+
+    app.directive("productDescription", function(){
+        return {
+            restrict: 'E',
+            templateUrl: 'product-description.html'
+        };
+    });
+    // app.directive('productSpecs', function (){
+    //     return {
+    //         restrict: 'A',
+    //         templateUrl: 'product-specs.html',
+    //     }
+    // });
+
 
     app.controller("ReviewController", function(){
         this.review = {};
 
         this.addReview = function (product){
-//            this.review.createdOn = Date.now();
+            this.review.createdOn = Date.now();
             product.reviews.push(this.review);
             this.review = {};
         };
@@ -49,6 +63,10 @@
             name: 'Dodecahedron',
             price: 2.00,
             description: 'Some gems have qualities beyond the luster, beyond the shine...Dodeca is one of those gems.',
+            shine: 8,
+            rarity: 7,
+            color: "CCC",
+            faces: 12,
             canPurchase: true,
             soldOut: false,
             images: ['pics/dodec_b.png'],
@@ -73,12 +91,16 @@
         },
 
         {
-            name: 'Pentagonal Gem',
+            name: 'Octahedron Gem',
             price: 5.95,
-            description:'The Pentagonal Gem is the alpine baron of gems, with hues, blue as the iris of an Austrian maiden',
+            description:'The Octahedron Gem is the alpine baron of gems, with hues, blue as the iris of an Austrian maiden',
+            shine: 9,
+            rarity: 6,
+            color: 'EEE',
+            faces: 8,
             canPurchase: true,
-            images: ['pics/pentag.png'],
-            thumbnails:['pics/pentag_thumb.png','pics/pentag_ch_thumb.png'],
+            images: ['pics/octahedron.jpg'],
+            thumbnails:['pics/octahedron_thumb.jpg','pics/octahedron_b_thumb.jpg'],
             reviews:[
                 {
                     stars:5,
